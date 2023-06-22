@@ -1,6 +1,6 @@
 from random import randint
 
-
+from graphic_arts.start_game_banner import run_screensaver
 def attack(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} нанёс противнику урон, равный '
@@ -56,7 +56,7 @@ def start_training(char_name, char_class):
     return 'Тренировка окончена.'
 
 
-def choice_char_class():
+def choice_char_class() -> object:
     approve_choice = None
     char_class = None
     while approve_choice != 'y':
@@ -88,3 +88,4 @@ def main():
     print('Воитель, Маг, Лекарь')
     char_class = choice_char_class()
     print(start_training(char_name, char_class))
+    
